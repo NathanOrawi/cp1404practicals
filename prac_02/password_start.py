@@ -1,19 +1,25 @@
-"""Asks user for password"""
+"""Asks user for password and display stars
+the length of the entered characters"""
 PASSWORD = "John6"
 
 
 def main():
-    user_password = input("Password: ")
-    while user_password != PASSWORD:
-        print("Incorrect password")
-        print_line(len(user_password))
-        user_password = input("Password: ")
-    print_line(len(user_password))
+    user_password = get_password()
+    hide_password(len(user_password))
     print("Correct password")
 
 
-def print_line(length=20, pen="*"):
-    print(pen * length)
+def get_password():
+    user_password = input("Password: ")
+    while user_password != PASSWORD:
+        print("Incorrect password")
+        hide_password(len(user_password))
+        user_password = input("Password: ")
+    return user_password
+
+
+def hide_password(length):
+    print('*' * length)
 
 
 main()
