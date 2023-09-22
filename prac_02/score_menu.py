@@ -10,19 +10,17 @@ def main():
     """main function"""
     print(MENU)
     choice = input("Choice: ").upper()
+    score = int(input("Enter score: "))
     while choice != 'Q':
         if choice == 'G':
-            score = float(input("Enter score: "))
             while 0 > score > 100:
                 print("Invalid score input")
                 score = float(input("Enter score: "))
             print("score is valid")
         elif choice == 'P':
-            score = float(input("Enter score: "))
             result = display_score(score)
             print(result)
         elif choice == 'S':
-            score = int(input("Enter score: "))
             as_many_stars = show_star(score)
             print(as_many_stars)
         else:
