@@ -3,7 +3,6 @@ CP1404/CP5632 - Practical
 Broken program to determine score status
 """
 
-
 def main():
     score = float(input("Enter score: "))
     result = display_score(score)
