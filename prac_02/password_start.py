@@ -5,7 +5,7 @@ PASSWORD = "John6"
 
 def main():
     user_password = get_password()
-    hide_password(len(user_password))
+    hide_character(len(user_password))
     print("Correct password")
 
 
@@ -13,12 +13,12 @@ def get_password():
     user_password = input("Password: ")
     while user_password != PASSWORD:
         print("Incorrect password")
-        hide_password(len(user_password))
+        hide_character(len(user_password))
         user_password = input("Password: ")
     return user_password
 
 
-def hide_password(length):
+def hide_character(length):
     print('*' * length)
 
 
