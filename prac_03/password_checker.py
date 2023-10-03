@@ -3,10 +3,10 @@ CP1404/CP5632 - Practical
 Password checker "skeleton" code to help you get started
 """
 
-MIN_LENGTH = 2
-MAX_LENGTH = 6
+MIN_LENGTH = 4
+MAX_LENGTH = 12
 SPECIAL_CHARS_REQUIRED = False
-SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
+NUMBER_OF_DIFFERENT_CHARACTER = 4
 
 
 def main():
@@ -17,6 +17,7 @@ def main():
     print("\t1 or more uppercase characters")
     print("\t1 or more lowercase characters")
     print("\t1 or more numbers")
+    print("\t1 or more special characters")
     if SPECIAL_CHARS_REQUIRED:
         print("\tand 1 or more special characters: ", SPECIAL_CHARACTERS)
     password = input("> ")
@@ -29,6 +30,10 @@ def main():
 def is_valid_password(password):
     """Determine if the provided password is valid."""
     # TODO: if length is wrong, return False
+    password_length = len(password)
+    print(password_length)
+    if password_length > MAX_LENGTH or password_length < MIN_LENGTH:
+        return False
 
     count_lower = 0
     count_upper = 0
@@ -36,10 +41,19 @@ def is_valid_password(password):
     count_special = 0
     for char in password:
         # TODO: count each kind of character (use str methods like isdigit)
-        pass
+        if char.islower():
+            count_lower += 1
+        elif char.isupper():
+            count_upper += 1
+        elif char.isdigit():
+            count_digit += 1
+        else:
+            count_special += 1
 
     # TODO: if any of the 'normal' counts are zero, return False
-
+    # i.e if the sum of the counts do not exceed the number of each kind of character, return False
+    if count_lower + count_upper + count_digit + count_special < NUMBER_OF_DIFFERENT_CHARACTER:
+        return False
     # TODO: if special characters are required, then check the count of those
     # and return False if it's zero
 
