@@ -1,3 +1,4 @@
+""" different ways to read files """
 FILE_NAME_1 = "name.txt"
 FILE_NAME_2 = "numbers.txt"
 
