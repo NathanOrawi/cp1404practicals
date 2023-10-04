@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 - Practical
-Fill in the TODOs to complete the task
+gets an integer from the user and does not crash when a non-number is entered
 """
 
 is_finished = False
