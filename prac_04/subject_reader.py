@@ -8,16 +8,16 @@ DATA = []
 
 
 def main():
-    # get the data
     data = get_data()
     print(data)
-    # get parts of data
+    format_data(data)
+
+
+def format_data(data):
     for parts in data:
         print(parts)
-        # get part of parts
         for part in parts:
             print(parts)
-        # format and print data
         print(f"{parts[0]} is taught by {parts[1]} and has {parts[2]} students")
 
 
