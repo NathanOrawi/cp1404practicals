@@ -8,6 +8,7 @@ DATA = []
 
 
 def main():
+    """Process data and outputs a grammatically precise output"""
     data = get_data()
     # print(data)
     format_data(data)
