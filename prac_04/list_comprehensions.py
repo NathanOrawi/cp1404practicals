@@ -49,11 +49,14 @@ print(numbers_greater_than_9)
 # TODO: (more advanced) use a list comprehension and the join string method
 # to create a string (not list) of the last names for those full names longer than 11 characters
 # the result should be: 'Harlem, Hendrix, Lovelace'
-names_longer_Than_11_characters = [full_name for full_name in full_names if len(full_name) > 11]
-# print("______________________________________")
-# print(names_longer_Than_11_characters)
-# print(" ".join(names_longer_Than_11_characters))
-# print((" ".join(names_longer_Than_11_characters)).split(' '))
-# print(((" ".join(names_longer_Than_11_characters)).split(' ')[1:6:2]))
-last_names_longer_Than_11_characters = ", ".join(((" ".join(names_longer_Than_11_characters)).split(' ')[1:6:2]))
-print(last_names_longer_Than_11_characters)
+
+# names_longer_Than_11_characters = [full_name for full_name in full_names if len(full_name) > 11]
+# last_names_longer_Than_11_characters = ", ".join(((" ".join(names_longer_Than_11_characters)).split(' ')[1:6:2]))
+# print(last_names_longer_Than_11_characters)
+
+last_names_longer_than_11_characters = [full_name.split()[1] for full_name in full_names if len(full_name) > 11]
+print(', '.join(last_names_longer_than_11_characters))
+
+# split methode produces a list targeted by the argument
+# join methode joins elements of a list on the selected target to produce strings
+# or get rids of brackets only if target (', '.) chosen wisely
