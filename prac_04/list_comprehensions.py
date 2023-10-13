@@ -57,6 +57,7 @@ print(numbers_greater_than_9)
 last_names_longer_than_11_characters = [full_name.split()[1] for full_name in full_names if len(full_name) > 11]
 print(', '.join(last_names_longer_than_11_characters))
 
-# split methode produces a list targeted by the argument
-# join methode joins elements of a list on the selected target to produce strings
-# or get rids of brackets only if target (', '.) chosen wisely
+# split method produces a list targeted by the argument
+# join method joins elements of a list on the selected target to produce strings
+# or get rids of brackets only, if target (', '.) chosen wisely and joins individual strings
+# strip method strips the edges of a string
