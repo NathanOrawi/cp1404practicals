@@ -10,7 +10,7 @@ CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern T
 
 
 def main():
-    """Asks the user for their 'short' state and prints the full state"""
+    """Asks the user for their 'short' state and prints the full state once"""
     display_dictionary(CODE_TO_NAME)
     state_code = (input("Enter short state: ")).upper()
     display_value(state_code)
@@ -26,11 +26,10 @@ def display_dictionary(dictionary):
 def display_value(key):
     """Display the value of a dictionary given a key"""
     while key != "":
-        if key in CODE_TO_NAME:
+        try:
             print(key, "is", CODE_TO_NAME[key])
-        else:
+        except KeyError:
             print("Invalid short state")
         break
-
 
 main()
