@@ -1,9 +1,9 @@
 """
-program to count the occurrences of words in a string
+CP1404 Prac 5
 
 Word Occurrences
 Estimate: 20 minutes
-Actual: 41 minutes
+Actual: 50 minutes
 """
 EMAIL_TO_NAME = {}
 
