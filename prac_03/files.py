@@ -5,7 +5,7 @@ FILE_NAME_2 = "numbers.txt"
 
 def main():
     """main function, call center. HAHA"""
-    user_name = "Bob Gru"  # input("Name:")
+    user_name = input("Name:")
     write_name_to_file(user_name)
     read_from_file()
     add_numbers_in_file()
@@ -29,8 +29,7 @@ def add_numbers_in_file():
     """adds any line of numbers in the file"""
     total = 0
     in_file = open(FILE_NAME_2)
-    lines = in_file.readlines()
-    for line in lines:
+    for line in in_file:
         number = int(line)
         total += number
     in_file.close()
