@@ -11,3 +11,5 @@ while not is_finished:
     except ValueError:
         print("Please enter a valid integer.")
 print("Valid result is:", result)
+# It's PyCharm thinking that you might somehow exit the loop before defining result.
+# Since we are controlling how we exit the loop, we know that this problem will not occur.
