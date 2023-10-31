@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Intermediat Excercises
+Intermediate Exercises
 """
 
 """Basic list operations"""
