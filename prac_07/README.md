@@ -27,6 +27,6 @@ Lindsay always uses the name "Bob" when giving an example that requires:
 
 Have you ever wondered what "Bob" looks like? 🤔
 
-![Bob Image](prac_07/Bob.jpeg "Bob")
+![](C:\Users\Bob\PycharmProjects\cp1404practicals\prac_07\Bob.jpeg "BOB")
 
 Now you know. You're __WELCOME__
