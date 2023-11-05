@@ -1,7 +1,6 @@
 """
-CP1404 Do-from-scratch Exercise
-Estimated Duration: 20 min
-Actual Duration: 30 min
+CP1404 Intermediate  Exercise
+Prac 7
 """
 
 
@@ -12,6 +11,9 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
+        return f"{self.name}({self.year}) : ${self.cost}"
+
+    def __repr__(self):
         return f"{self.name}({self.year}) : ${self.cost}"
 
     def get_age(self, current_year):
