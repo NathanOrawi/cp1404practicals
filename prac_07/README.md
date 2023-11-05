@@ -5,7 +5,7 @@ to class.
 
 ## Clean Code
 
-To keep your code clean unlike your room. List are the top 3 approaches to keep code clean.
+To keep your code clean unlike your room. Listed are the top 3 approaches to keep code clean.
 
 - D.R.Y is good. W.E.T (Way Extra Typing) is Bad
 - Save time by not reinventing the wheel. Import modules
