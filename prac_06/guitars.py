@@ -14,17 +14,15 @@ def main():
     (keep inputting until they enter a blank name), then print their details"""
     guitars = []
     print("My guitars!")
-    while True:
-        name = input("Name: ")
-        if name == "":
-            break
+    name = input("Name: ")
+    while name != "":
         try:
             year = int(input("Year: "))
             cost = float(input("Cost: "))
             guitars.append(Guitar(name, year, cost))
         except ValueError:
             print("Year and Cost must be a number. Try again!!!")
-
+        name = input("Name: ")
     # guitars = [Guitar("Gibson L-5 CES", 1922, 16035.40), Guitar("Line 6 JTV-59", 2010, 1512.9)]
     display_collection(guitars)
 
