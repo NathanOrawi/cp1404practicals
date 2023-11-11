@@ -1,0 +1,7 @@
+43 is Bad
+77 is Passable
+27 is Bad
+85 is Passable
+62 is Passable
+44 is Bad
+90 is Excellent
