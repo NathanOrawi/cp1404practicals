@@ -15,7 +15,7 @@ def main():
         # print(repr(line))  # debugging
         # Strip newline from end and split it into parts (CSV)
         parts = line.strip().split(',')
-        # print(parts)  # debugging
+        print(parts)  # debugging
         # Construct a Guitar object using the elements
         # year should be an int
         guitar = Guitar(parts[0], parts[1], parts[2])
@@ -26,7 +26,11 @@ def main():
     # Close the file as soon as we've finished reading it
     in_file.close()
 
-    # Loop through and write all guitars from oldest (using their repr and lt method)
+    load_guitar()
+
+
+def load_guitar():
+    """Loop through and write all guitars from oldest (using their repr and lt method)"""
     out_file = open('guitars.csv', 'w')
     for guitar in sorted(GUITARS):
         out_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
@@ -37,10 +41,8 @@ def get_guitar():
     """Creates objects to store all the user's guitars
     (keep inputting until they enter a blank name), then print their details"""
     print("My guitars!")
-    while True:
-        name = input("Name: ")
-        if name == "":
-            break
+    name = input("Name: ")
+    while name != "":
         try:
             input_year = int(input("Year: "))
             year = str(input_year)  # Class takes string
@@ -49,7 +51,7 @@ def get_guitar():
             GUITARS.append(Guitar(name, year, cost))
         except ValueError:
             print("Year and Cost must be a number. Try again!!!")
-
+        name = input("Name: ")
     # guitars = [Guitar("Gibson L-5 CES", 1922, 16035.40), Guitar("Line 6 JTV-59", 2010, 1512.9)
 
 

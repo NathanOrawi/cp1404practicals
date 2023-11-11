@@ -3,6 +3,7 @@ CP1404 Intermediate  Exercise
 Prac 7
 """
 
+VINTAGE_AGE = 50
 
 class Guitar:
     def __init__(self, name="", year=0, cost=0.0):
@@ -11,9 +12,11 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
+        """display format for final output"""
         return f"{self.name}({self.year}) : ${self.cost}"
 
     def __repr__(self):
+        """display format for final output"""
         return f"{self.name}({self.year}) : ${self.cost}"
 
     def get_age(self, current_year):
@@ -22,11 +25,12 @@ class Guitar:
 
     def is_vintage(self, current_year):
         """Checks if the guitar is 50 years or older, to dim as vintage or not"""
-        if self.get_age(current_year) >= 50:
+        if self.get_age(current_year) >= VINTAGE_AGE:
             return True
         return False
 
     def __lt__(self, other):
+        """Finds the lesser year"""
         return self.year < other.year
 
 
